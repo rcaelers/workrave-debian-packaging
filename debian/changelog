@@ -1,0 +1,410 @@
+workrave (1.9.4-1) unstable; urgency=low
+
+  * New upstream release
+    - drop all Debian patches (applied upstream)
+
+  * Update location of .xpm menu icon
+  * Remove empty /usr/include directory after building
+  * Remove obsolete breaks/replaces from debian/control
+
+ -- Francois Marier <francois@debian.org>  Fri, 25 Mar 2011 17:17:18 +1300
+
+workrave (1.9.3-2) unstable; urgency=medium
+
+  * Add missing build dependency on libpulse-dev (closes: #610275)
+
+ -- Francois Marier <francois@debian.org>  Mon, 17 Jan 2011 13:05:21 +1300
+
+workrave (1.9.3-1) unstable; urgency=low
+
+  * New upstream release (closes: #598222)
+    - detects concurrent instances (closes: #266371)
+    - drop gtkmm patch (applied upstream)
+  * Backport 3 upstream commits for broken network connections
+  * Patch a small typo in error messages (lintian notice)
+
+  * Switch from Conflicts/Replaces to Breaks/Replaces in debian/control
+  * Bump Standards-Version to 3.9.1
+  * Bump debhelper compatibility to 8
+
+ -- Francois Marier <francois@debian.org>  Tue, 11 Jan 2011 20:59:08 +1300
+
+workrave (1.9.1-3) unstable; urgency=medium
+
+  * Sync with Ubuntu:
+    - merge in gtkmm API changes (closes: #577317)
+
+ -- Francois Marier <francois@debian.org>  Wed, 14 Apr 2010 12:04:25 +1200
+
+workrave (1.9.1-2) unstable; urgency=low
+
+  * Drop the dependency on libgnomeuimm-2.6-dev (closes: #568802)
+  * Bump Standards-Version to 3.8.4
+  * Switch to 3.0 (quilt) source format
+
+ -- Francois Marier <francois@debian.org>  Tue, 09 Feb 2010 15:20:30 +1300
+
+workrave (1.9.1-1) unstable; urgency=low
+
+  * New upstream release (closes: #496842)
+  * Drop all debian patches (merged upstream)
+
+ -- Francois Marier <francois@debian.org>  Mon, 26 Oct 2009 13:57:43 +1300
+
+workrave (1.9.0-8) unstable; urgency=low
+
+  * Fix dpatch support so that patches are applied (closes: #550630)
+  * Fix FTBFS on gcc 4.4 (closes: #550607, LP: 448742)
+
+  * Bump Standards-Version to 3.8.3
+  * Remove dh_desktop from debian/rules
+  * Add README.source
+  * Add a dependency on misc:depends (lintian warning)
+  * Cleanup GPL notice (lintian notice)
+
+ -- Francois Marier <francois@debian.org>  Mon, 12 Oct 2009 12:49:51 +1300
+
+workrave (1.9.0-7) unstable; urgency=low
+
+  * Fix timers on newer X servers (like Ubuntu Jaunty) using a patch from
+    upstream (http://issues.workrave.org/cgi-bin/bugzilla/show_bug.cgi?id=804)
+  * Bump Standards-Version to 3.8.1
+  * Bump debhelper compatibility to 7
+  * debian/rules: make use of dh_prep
+
+ -- Francois Marier <francois@debian.org>  Sat, 21 Mar 2009 16:09:33 +1300
+
+workrave (1.9.0-6) unstable; urgency=low
+
+  * Changed the package priority to extra because of a dependency on
+    libxcb-render-util0 which is also in the extra priority
+  * Update watch file to accommodate dashes in the version number
+
+ -- Francois Marier <francois@debian.org>  Tue, 11 Nov 2008 12:15:41 +1300
+
+workrave (1.9.0-5) unstable; urgency=low
+
+  * Fix the saving of the username value in the network preferences
+
+ -- Francois Marier <francois@debian.org>  Wed, 10 Sep 2008 16:59:19 +1200
+
+workrave (1.9.0-4) unstable; urgency=low
+
+  * Add common/bin/DBus-glib.xml from upstream svn since it's missing
+    from the tarball and appears to be required (closes: #497393)
+
+ -- Francois Marier <francois@debian.org>  Thu, 04 Sep 2008 21:11:02 +1200
+
+workrave (1.9.0-3) unstable; urgency=low
+
+  * Add python-cheetah to Build-Depends (closes: #496331)
+
+ -- Francois Marier <francois@debian.org>  Tue, 26 Aug 2008 17:24:36 +1200
+
+workrave (1.9.0-2) unstable; urgency=low
+
+  * Add intltool to Build-Depends (closes: #495031)
+  * Fix watch file
+
+ -- Francois Marier <francois@debian.org>  Thu, 14 Aug 2008 12:41:06 -0400
+
+workrave (1.9.0-1) unstable; urgency=low
+
+  * New upstream release (closes: #448860, #471261, #483532)
+  * Add new build dependencies: libgdome2-dev and libgstreamer0.10-dev
+  * Remove custom desktop and xpm files since they're now upstream
+
+ -- Francois Marier <francois@debian.org>  Tue, 22 Jul 2008 09:55:02 +1200
+
+workrave (1.8.5-7) unstable; urgency=low
+
+  * Bump debhelper dependency/compatibility to 6
+  * Bump Standards-Version to 3.8.0 (no changes)
+  * Treat NEWS as the upstream changelog
+  * Switch the packaging repo to git
+
+ -- Francois Marier <francois@debian.org>  Sat, 12 Jul 2008 10:49:28 +1200
+
+workrave (1.8.5-6) unstable; urgency=low
+
+  * Add categories to the .desktop file (closes: #464527)
+  * Proper copyright statement in debian/copyright
+  * Create a new workrave-data package for arch-independent files
+  * Remove RSI acronym from the short description
+
+ -- Francois Marier <francois@debian.org>  Wed, 27 Feb 2008 15:10:06 +1300
+
+workrave (1.8.5-5) unstable; urgency=low
+
+  * Make debian/control point to the Workrave homepage, not the renameutils
+    one (closes: #461779)
+  * Fix GCC 4.3 compilation errors using a patch from Ubuntu (closes: #455113)
+  * Remove Encoding key from the .desktop file
+  * Fix spelling of GNOME in package description
+
+ -- Francois Marier <francois@debian.org>  Sat, 26 Jan 2008 12:43:44 +1300
+
+workrave (1.8.5-4) unstable; urgency=low
+
+  * Fix the watch file (closes: #453544)
+  * Bump Standards-Version to 3.7.3 (no changes)
+  * Remove /usr/sbin from debian/dirs (it was empty)
+  * Add a call to dh_desktop in debian/rules
+
+ -- Francois Marier <francois@debian.org>  Tue, 11 Dec 2007 13:29:54 +1300
+
+workrave (1.8.5-3) unstable; urgency=low
+
+  * Rename XS-Vcs-* fields to Vcs-*
+  * Sync with Ubuntu: fix the GNOME applet icon and category
+
+ -- Francois Marier <francois@debian.org>  Wed, 21 Nov 2007 09:28:25 +1300
+
+workrave (1.8.5-2) unstable; urgency=low
+
+  * New feature: ability to disable the network server (and close that port), 
+    separately from disabling all network functionalities altogether
+    (see http://issues.workrave.org/cgi-bin/bugzilla/show_bug.cgi?id=687)
+  * Add homepage field to debian/control
+
+ -- Francois Marier <francois@debian.org>  Thu, 25 Oct 2007 16:27:57 +1300
+
+workrave (1.8.5-1) unstable; urgency=low
+
+  * New upstream release (closes: #441930, #416252)
+  * Add a menu icon for GNOME/KDE (closes: #318835)
+
+ -- Francois Marier <francois@debian.org>  Tue, 25 Sep 2007 13:08:40 +1200
+
+workrave (1.8.4-9) unstable; urgency=low
+
+  * Fix display of portugese translation (closes: #440118)
+    Thanks to Goedson Teixeira Paixao and Rob Caelers for the patch!
+
+ -- Francois Marier <francois@debian.org>  Fri, 31 Aug 2007 12:51:22 +1200
+
+workrave (1.8.4-8) unstable; urgency=low
+
+  * Build with dbus support and provide an example script in
+    /usr/share/doc/workrave/examples (closes: #373289)
+  * Add a blurb in README.Debian about the above example script
+
+ -- Francois Marier <francois@debian.org>  Mon, 27 Aug 2007 12:29:07 +1200
+
+workrave (1.8.4-7) unstable; urgency=low
+
+  * Suggest values for the micro and rest breaks in README.Debian
+  * debian/control: mention the collab-maint svn repo
+
+ -- Francois Marier <francois@debian.org>  Mon, 20 Aug 2007 14:57:37 +1200
+
+workrave (1.8.4-6) unstable; urgency=low
+
+  * Get a fix from upstream svn (closes: #419100)
+  * Fixed the watch file
+  * Reformat README.Debian, update the bugzilla link
+
+ -- Francois Marier <francois@debian.org>  Mon, 13 Aug 2007 16:30:05 +1200
+
+workrave (1.8.4-5) unstable; urgency=low
+
+  * New maintainer (closes: #434492).  Thanks Michael for your work!
+  * debian/rules: remove commented-out calls to dh_*
+  * debian/copyright: be more explicit with the GPL and refer to
+    /usr/share/common-licenses/GPL-2 instead of the GPL symlink
+  * debian/control: expand RSI in the short description
+  * debian/menu: change section for the menu transition
+  * Sync with Ubuntu:
+    - mutex crash: http://issues.workrave.org/cgi-bin/bugzilla/show_bug.cgi?id=611
+    - POTFILES.in fixes
+
+ -- Francois Marier <francois@debian.org>  Thu, 26 Jul 2007 22:24:06 +1200
+
+workrave (1.8.4-4) unstable; urgency=high
+
+  * Applied fix from upstream that supposedly fixes the crashes on startup
+    (closes: 421366); I cannot check myself, but confirmed by others.
+  * The bug closed has severity 'grave', therefore high urgency.
+
+ -- Michael Piefel <piefel@debian.org>  Mon, 02 Jul 2007 10:42:06 +0200
+
+workrave (1.8.4-3) unstable; urgency=low
+
+  * Added a comment on how to fix a Workrave that disappeared when no panel at
+    all is used (closes: #425359)
+
+ -- Michael Piefel <piefel@debian.org>  Tue, 26 Jun 2007 11:59:39 +0200
+
+workrave (1.8.4-2) unstable; urgency=low
+
+  * Fix C++ includes (closes: #417762) thanks to Martin Michlmayr
+
+ -- Michael Piefel <piefel@debian.org>  Thu, 10 May 2007 10:57:30 +0200
+ 
+workrave (1.8.4-1) unstable; urgency=low
+
+  * New upstream version
+    - KDE applet space fixed (closes: #289382)
+    - historystats reader fixed (closes: #390495)
+  * Add dependency on libxtst-dev to enable XRecord extension (closes: #388669)
+
+ -- Michael Piefel <piefel@debian.org>  Tue, 13 Mar 2007 10:36:47 +0100
+ 
+workrave (1.8.3-1) unstable; urgency=low
+
+  * New upstream version
+    - builds with G++ 4.2 (closes: #357748)
+    - breaks cleanly while screen is locked (closes: #334972)
+    - shouldn’t crash anymore (or less regularly, closes: #365270)
+    - applet popup menu is now accessible when all timers hidden (closes: #359931)
+    - fixed Czech translation (closes: #365269)
+  * New Brazilian Portuguese translation straight from Workrave issue tracker
+    (closes: #320639 as well, I should hope)
+
+ -- Michael Piefel <piefel@debian.org>  Mon, 15 May 2006 15:40:59 +0200
+
+workrave (1.8.2-1) unstable; urgency=low
+
+  * New upstream (closes: #353950)
+
+ -- Michael Piefel <piefel@debian.org>  Fri, 24 Feb 2006 09:21:00 +0100
+
+workrave (1.8.1-1) unstable; urgency=low
+
+  * New upstream (closes: #321450)
+  * New build closes: #271193, #290656
+  * German PO fix (closes: #313885)
+
+ -- Michael Piefel <piefel@debian.org>  Mon, 15 Aug 2005 11:59:49 +0200
+
+workrave (1.6.2-1) unstable; urgency=low
+
+  * New upstream. This supposedly closes: #251070; I hope it does.
+
+ -- Michael Piefel <piefel@debian.org>  Tue, 03 Aug 2004 14:29:40 +0200
+
+workrave (1.6.1-2) unstable; urgency=low
+
+  * Extended build-deps.
+
+ -- Michael Piefel <piefel@debian.org>  Fri, 21 May 2004 15:55:09 +0200
+
+workrave (1.6.1-1) unstable; urgency=low
+
+  * New upstream version. Unfortunate timing.
+
+ -- Michael Piefel <piefel@debian.org>  Fri, 14 May 2004 11:14:59 +0200
+
+workrave (1.6.0-2) unstable; urgency=low
+
+  * As intltool requires Perl's XML parser, now build-depend on
+    libxml-parser-perl (closes: #248650)
+
+ -- Michael Piefel <piefel@debian.org>  Thu, 13 May 2004 16:59:58 +0200
+
+workrave (1.6.0-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Michael Piefel <piefel@debian.org>  Wed, 12 May 2004 15:26:49 +0200
+
+workrave (1.4.1-1) unstable; urgency=low
+
+  * „Neues Orbit, neues Glück!“
+  * New upstream version
+  * This recompile might close #217998
+
+ -- Michael Piefel <piefel@debian.org>  Wed, 05 Nov 2003 12:44:42 +0100
+
+workrave (1.4.0-1) unstable; urgency=low
+
+  * New upstream version (closes: #207723)
+  * Add auto-update for config.*
+
+ -- Michael Piefel <piefel@debian.org>  Fri, 29 Aug 2003 15:46:27 +0200
+
+workrave (1.2.2.cvs20030617-3) unstable; urgency=low
+
+  * Recompile with new orbit, this also closes: #198738
+
+ -- Michael Piefel <piefel@debian.org>  Fri, 27 Jun 2003 13:49:23 +0200
+
+workrave (1.2.2.cvs20030617-2) unstable; urgency=low
+
+  * Make non-executable configure executable (closes: #198094)
+    (hack, real fix when real new version arrives)
+  * Add Build-Dep for g++-3.2, as g++-3.3 is too buggy for orbit
+
+ -- Michael Piefel <piefel@debian.org>  Fri, 20 Jun 2003 09:07:20 +0200
+
+workrave (1.2.2.cvs20030617-1) unstable; urgency=low
+
+  * CVS checkout
+  * Fixes sheep-when-respawning and mouse drift, I hope, and closes bugs
+    189950 and 190802
+  * Should also be buildable everywhere, I hope, which should close bugs
+    189954 and 193426
+  * Fix description typo (closes: #196661)
+  * Rebuild makes it real sid again (closes: #192594)
+
+ -- Michael Piefel <piefel@debian.org>  Tue, 17 Apr 2003 11:13:26 +0200
+
+workrave (1.2.2-1) unstable; urgency=low
+
+  * Changed section to gnome
+  * New description from last version closes: #188233
+
+ -- Michael Piefel <piefel@debian.org>  Tue, 15 Apr 2003 15:13:26 +0200
+
+workrave (1.2.2-0) unstable; urgency=low
+
+  * New upstream release
+  * Added libgnomeuimm1.3-dev to build-depends, removed other
+    build-depends that are implied by that
+
+ -- Johannes Rohr <j.rohr@comlink.apc.org>  Tue, 25 Mar 2003 23:12:32 +0100
+
+workrave (1.2.1-1) unstable; urgency=low
+
+  * New upstream release (closes: #184205)
+  * Added menu entry
+  * Tightened up build-depends, added libpanel-applet2-dev
+  * Revised extended package description to sound more attractive
+  * Replaced debian/rules with version from upstream's CVS, in order to
+    enable all the nice stuff that has been added to Workrave in version
+    1.2 and to fix the typo that prevented the network capabilities from
+    being compiled in
+  * Removed call to dh_undocumented from debian/rules
+  * Bumped up standards-version to 3.5.9
+
+ -- Johannes Rohr <j.rohr@comlink.apc.org>  Mon, 24 Mar 2003 23:02:01 +0100
+
+workrave (1.0.0-2) unstable; urgency=low
+
+  * First official Debian package (closes: #162159)
+
+ -- Michael Piefel <piefel@debian.org>  Tue, 25 Feb 2003 15:59:37 +0100
+
+workrave (1.0.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Rob Caelers <robc@krandor.org>  Wed, 30 Oct 2002 20:02:40 +0100
+
+workrave (0.3.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Rob Caelers <robc@krandor.org>  Fri, 11 Oct 2002 22:50:20 +0200
+
+workrave (0.2.0-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Rob Caelers <robc@krandor.org>  Thu, 26 Sep 2002 19:50:52 +0200
+
+workrave (0.1.0-1) unstable; urgency=low
+
+  * First public release
+
+ -- Rob Caelers <robc@krandor.org>  Sun,  22 Sep 2002 15:00:06 +0200
