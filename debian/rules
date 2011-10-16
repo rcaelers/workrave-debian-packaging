@@ -38,7 +38,7 @@ config.status: configure
 		--mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info \
 		--libexecdir=\$${prefix}/lib/gnome-applets --sysconfdir=/etc \
 		--disable-dependency-tracking --enable-dbus \
-		--enable-gconf --enable-exercises
+		--enable-exercises --disable-schemas-compile
 	rm config.sub && mv config.sub.upstream config.sub
 	rm config.guess && mv config.guess.upstream config.guess
 
@@ -71,7 +71,8 @@ install: build
 	dh_installdirs
 
 	# Add here commands to install the package into debian/workrave.
-	$(MAKE) install prefix=$(CURDIR)/debian/workrave/usr sysconfdir=$(CURDIR)/debian/workrave/etc
+	$(MAKE) install DESTDIR=$(CURDIR)/debian/workrave
+#sysconfdir=$(CURDIR)/debian/workrave/etca
 
 	rmdir $(CURDIR)/debian/workrave/usr/include
 	mv $(CURDIR)/debian/workrave/usr/share/ $(CURDIR)/debian/workrave-data/usr/
@@ -105,6 +106,7 @@ binary-arch: build install
 	dh_shlibdeps
 	dh_gencontrol
 	dh_md5sums
+	dh_makeshlibs
 	dh_builddeb
 
 binary: binary-indep binary-arch

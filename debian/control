@@ -1,12 +1,10 @@
 Source: workrave
 Section: gnome
 Priority: extra
-Maintainer: Francois Marier <francois@debian.org>
-Build-Depends: debhelper (>= 8), libgnet-dev, libgnomeui-dev, libpanel-applet2-dev, libxi-dev, libxmu-dev, libxtst-dev, autotools-dev, libxml-parser-perl, libdbus-glib-1-dev, libgdome2-dev, libgstreamer0.10-dev, intltool, python-cheetah, libgtkmm-2.4-dev, libglibmm-2.4-dev, libsigc++-2.0-dev, libpulse-dev
+Maintainer: Rob Caelers <robc@krandor.org>
+Build-Depends: debhelper (>= 8), libpanel-applet-4-dev, libxi-dev, libxmu-dev, libxtst-dev, autotools-dev, libxml-parser-perl, libgdome2-dev, libgstreamer0.10-dev, intltool, python-cheetah, libgtkmm-3.0-dev, libglibmm-2.4-dev, libsigc++-2.0-dev, libpulse-dev, libdbusmenu-glib-dev, libdbusmenu-gtk3-dev, libgirepository1.0-dev, libindicator3-dev, gobject-introspection
 Standards-Version: 3.9.1
 Homepage: http://www.workrave.org/
-Vcs-git: git://git.debian.org/git/collab-maint/workrave.git
-Vcs-Browser: http://git.debian.org/?p=collab-maint/workrave.git;a=summary
 
 Package: workrave
 Architecture: any
@@ -41,3 +39,20 @@ Description: Repetitive Strain Injury prevention tool (data files)
  tools.
  .
  This package contains the required data files common to all architectures.
+
+Package: workrave-unity
+Depends: ${misc:Depends}
+Description: Repetitive Strain Injury prevention tool (data files)
+ Workrave is a program that assists in the recovery and prevention of
+ Repetitive Strain Injury (RSI). The program frequently alerts you to
+ take micro-pauses, rest breaks and restricts you to your daily limit.
+ .
+ It includes a system tray applet that works with GNOME and KDE
+ and has network capabilities to monitor your activity even if
+ switching back and forth between different computers is part of your
+ job.
+ .
+ Workrave offers many more configuration options than other similar
+ tools.
+ .
+ This package contains the unity applet.

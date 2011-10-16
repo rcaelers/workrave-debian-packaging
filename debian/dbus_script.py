@@ -13,9 +13,9 @@ class WorkraveDBus:
     def __init__(self):
 
         bus = dbus.SessionBus()
-        obj = bus.get_object("org.workrave.Workrave", "/org/workrave/Workrave")
+        obj = bus.get_object("org.workrave.Workrave", "/org/workrave/Workrave/Core")
 
-        workrave = dbus.Interface(obj, "org.workrave.WorkraveInterface")
+        workrave = dbus.Interface(obj, "org.workrave.CoreInterface")
 
         workrave.connect_to_signal("MicrobreakChanged",
                                    self.microbreak_signal, sender_keyword='sender')

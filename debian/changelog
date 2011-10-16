@@ -1,3 +1,9 @@
+workrave (1.9.900-1) precise; urgency=low
+
+   * New upstream release
+
+ -- Rob Caelers <rob.caelers@gmail.com>  Mon, 10 Oct 2011 21:38:11 +0200
+
 workrave (1.9.4-1) unstable; urgency=low
 
   * New upstream release
