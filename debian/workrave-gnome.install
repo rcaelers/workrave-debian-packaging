@@ -1,0 +1,4 @@
+debian/tmp/usr/share/dbus-1/services/org.workrave.WorkraveAppletFactory.service
+debian/tmp/usr/share/gnome-panel
+debian/tmp/usr/share/gnome-shell
+debian/tmp/usr/lib/gnome-applets

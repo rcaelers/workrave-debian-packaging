@@ -41,8 +41,9 @@ Description: Repetitive Strain Injury prevention tool (data files)
  This package contains the required data files common to all architectures.
 
 Package: workrave-unity
-Depends: ${misc:Depends}
-Description: Repetitive Strain Injury prevention tool (data files)
+Architecture: any
+Depends: workrave (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Description: Repetitive Strain Injury prevention tool (Unity support)
  Workrave is a program that assists in the recovery and prevention of
  Repetitive Strain Injury (RSI). The program frequently alerts you to
  take micro-pauses, rest breaks and restricts you to your daily limit.
@@ -56,3 +57,22 @@ Description: Repetitive Strain Injury prevention tool (data files)
  tools.
  .
  This package contains the unity applet.
+
+ 
+Package: workrave-gnome
+Architecture: any
+Depends: workrave (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Description: Repetitive Strain Injury prevention tool (Gnome support)
+ Workrave is a program that assists in the recovery and prevention of
+ Repetitive Strain Injury (RSI). The program frequently alerts you to
+ take micro-pauses, rest breaks and restricts you to your daily limit.
+ .
+ It includes a system tray applet that works with GNOME and KDE
+ and has network capabilities to monitor your activity even if
+ switching back and forth between different computers is part of your
+ job.
+ .
+ Workrave offers many more configuration options than other similar
+ tools.
+ .
+ This package contains the gnome applet.

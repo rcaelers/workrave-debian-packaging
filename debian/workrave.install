@@ -1,0 +1,5 @@
+debian/tmp/usr/bin
+debian/tmp/usr/lib/girepository-1.0
+debian/tmp/usr/lib/indicators3
+debian/tmp/usr/lib/libworkrave*
+debian/tmp/usr/share/applications/workrave.desktop
