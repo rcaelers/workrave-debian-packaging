@@ -1,7 +1,6 @@
 #!/bin/sh -x
 
-BUILD=/home/robc/src/workrave-build/
-rm -rf "$BUILD" > /dev/null 2>&1
+BUILD=/home/robc/src/workrave-build
 mkdir -p "$BUILD"
 
 SOURCE="$1"
@@ -9,7 +8,8 @@ VERSION=`echo $SOURCE | sed -e 's/.*-\(.*\).tar.gz/\1/'`
 
 echo "Preparing build environment"
 
-tar xzfC "$SOURCE" "$BUILD"  || exit 1
+rm -rf "$BUILD/workrave-$VERSION" || exit 1
+tar xzfC "$SOURCE" "$BUILD" || exit 1
 cp "$SOURCE" "$BUILD/workrave_$VERSION.orig.tar.gz" || exit 1
 cp -r ./debian "$BUILD/workrave-$VERSION/debian" || exit 1
 

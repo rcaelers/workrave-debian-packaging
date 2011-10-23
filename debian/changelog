@@ -1,3 +1,15 @@
+workrave (1.9.901-1ppa1) oneiric; urgency=low
+
+  * New snapshot release
+
+ -- Rob Caelers <robc@krandor.org>  Sun, 23 Oct 2011 23:08:04 +0200
+
+workrave (1.9.900-1ppa2) oneiric; urgency=low
+
+  * Remove unity files from main workrave package
+
+ -- Rob Caelers <robc@krandor.org>  Sun, 23 Oct 2011 22:19:54 +0200
+
 workrave (1.9.900-1ppa1) oneiric; urgency=low
 
   * New snapshot release
