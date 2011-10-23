@@ -45,10 +45,9 @@ do
 	echo NP $NEW_PKG_VERSION
 	echo S $SERIES_VERSION
 	
-	if [ -f debian/control.${series} ]; then
-	    rm -f debian/control
-	    mv debian/control.${series} debian/control
-	    echo "Using debian/control.${series}"
+	if [ -d debian/${series} ]; then
+	    mv -f debian/${series}/* debian
+	    rmdir debian/${series}
 	fi
 	
 	sed -i -e "1,1 s/^\(.*ppa[0-9]\+\)\(.*\)\().*\)$/\1~${series}${SERIES_VERSION}\3/" -e "1,1 s/^\(.*) \)\(.*\)\(;.*\)$/\1${series}\3/"  debian/changelog

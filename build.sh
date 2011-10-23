@@ -18,6 +18,11 @@ cp -r ./debian "$BUILD/workrave-$VERSION/debian" || exit 1
     ln "$SOURCE" "$BUILD/local/workrave_$VERSION.orig.tar.gz" && 
     cp -a "$BUILD/workrave-$VERSION" "$BUILD/local" && 
     cd "$BUILD/local/workrave-$VERSION" &&
+    series=`lsb_release -c | cut -f2` &&
+    if [ -d debian/${series} ]; then
+	mv -f debian/${series}/* debian
+	rmdir debian/${series}
+    fi
     sudo ARCH=amd64 pdebuild --debbuildopts "-j12 -sa"
     ) > local.log 2>&1
 

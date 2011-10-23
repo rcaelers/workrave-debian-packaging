@@ -98,7 +98,7 @@ binary-arch: build install
 	dh_installchangelogs NEWS
 	dh_installchangelogs
 	dh_installexamples
-	dh_install
+	dh_install --list-missing
 	dh_link
 	dh_strip
 	dh_compress
