@@ -1,0 +1,59 @@
+Source: workrave
+Section: gnome
+Priority: extra
+Maintainer: Rob Caelers <robc@krandor.org>
+Build-Depends: debhelper (>= 8), libgnomeui-dev, libpanel-applet2-dev, libxi-dev, libxmu-dev, libxtst-dev, autotools-dev, libxml-parser-perl, libdbus-glib-1-dev, libgdome2-dev, libgstreamer0.10-dev, intltool, python-cheetah, libgtkmm-2.4-dev, libglibmm-2.4-dev, libsigc++-2.0-dev, libpulse-dev
+Standards-Version: 3.9.1
+Homepage: http://www.workrave.org/
+
+Package: workrave
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, workrave-data (= ${source:Version})
+Description: Repetitive Strain Injury prevention tool
+ Workrave is a program that assists in the recovery and prevention of
+ Repetitive Strain Injury (RSI). The program frequently alerts you to
+ take micro-pauses, rest breaks and restricts you to your daily limit.
+ .
+ It includes a system tray applet that works with GNOME and KDE
+ and has network capabilities to monitor your activity even if
+ switching back and forth between different computers is part of your
+ job.
+ .
+ Workrave offers many more configuration options than other similar
+ tools.
+
+Package: workrave-data
+Architecture: all
+Depends: ${misc:Depends}
+Description: Repetitive Strain Injury prevention tool (data files)
+ Workrave is a program that assists in the recovery and prevention of
+ Repetitive Strain Injury (RSI). The program frequently alerts you to
+ take micro-pauses, rest breaks and restricts you to your daily limit.
+ .
+ It includes a system tray applet that works with GNOME and KDE
+ and has network capabilities to monitor your activity even if
+ switching back and forth between different computers is part of your
+ job.
+ .
+ Workrave offers many more configuration options than other similar
+ tools.
+ .
+ This package contains the required data files common to all architectures.
+
+Package: workrave-gnome
+Architecture: any
+Depends: workrave (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Description: Repetitive Strain Injury prevention tool (Gnome support)
+ Workrave is a program that assists in the recovery and prevention of
+ Repetitive Strain Injury (RSI). The program frequently alerts you to
+ take micro-pauses, rest breaks and restricts you to your daily limit.
+ .
+ It includes a system tray applet that works with GNOME and KDE
+ and has network capabilities to monitor your activity even if
+ switching back and forth between different computers is part of your
+ job.
+ .
+ Workrave offers many more configuration options than other similar
+ tools.
+ .
+ This package contains the gnome applet.
