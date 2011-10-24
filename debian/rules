@@ -38,11 +38,13 @@ config.status: configure
 		--mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info \
 		--libexecdir=\$${prefix}/lib/gnome-applets --sysconfdir=/etc \
 		--disable-dependency-tracking --enable-dbus \
-		--enable-exercises --disable-schemas-compile
+		--enable-exercises --enable-gsettings --disable-schemas-compile
 	rm config.sub && mv config.sub.upstream config.sub
 	rm config.guess && mv config.guess.upstream config.guess
 
 
+build-arch:
+build-indep:
 build: build-stamp
 
 build-stamp:  config.status
@@ -72,15 +74,7 @@ install: build
 
 	# Add here commands to install the package into debian/workrave.
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
-#sysconfdir=$(CURDIR)/debian/workrave/etca
-
 	rmdir $(CURDIR)/debian/tmp/usr/include
-	#mv $(CURDIR)/debian/workrave/usr/share/ $(CURDIR)/debian/workrave-data/usr/
-
-	# Move menu and icon into the main package
-	#mkdir -p $(CURDIR)/debian/workrave/usr/share/pixmaps/workrave/
-	#mv $(CURDIR)/debian/workrave-data/usr/share/applications/ $(CURDIR)/debian/workrave/usr/share/
-	#mv $(CURDIR)/debian/workrave-data/usr/share/workrave/images/workrave.xpm $(CURDIR)/debian/workrave/usr/share/pixmaps/workrave/
 
 # Build architecture-independent files here.
 binary-indep: build install
