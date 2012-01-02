@@ -1,3 +1,23 @@
+workrave (1.9.904-ppa1) oneiric; urgency=low
+
+  * New snapshot release
+    - Fixes a memory leak in the Unity applet
+	(closes http://issues.workrave.org/show_bug.cgi?id=1053)
+
+ -- Rob Caelers <robc@krandor.org>  Tue, 22 Nov 2011 19:42:37 +0100
+
+workrave (1.9.903-ppa1) oneiric; urgency=low
+
+  * New snapshot release
+
+ -- Rob Caelers <robc@krandor.org>  Wed, 09 Nov 2011 21:03:25 +0100
+
+workrave (1.9.902-ppa1) oneiric; urgency=low
+
+  * New snapshot release
+
+ -- Rob Caelers <robc@krandor.org>  Mon, 24 Oct 2011 20:02:14 +0200
+
 workrave (1.9.901-1ppa1) oneiric; urgency=low
 
   * New snapshot release
