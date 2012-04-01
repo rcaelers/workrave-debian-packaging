@@ -1,3 +1,55 @@
+workrave (1.9.909-ppa1) precise; urgency=low
+
+  * Fixes visibility of the Gnome Shell applet.
+  * Gnome Shell aplet now automatically starts Workrave
+
+ -- Rob Caelers <robc@krandor.org>  Sun, 01 Apr 2012 21:42:18 +0200
+
+workrave (1.9.908-ppa2) precise; urgency=low
+
+  * Add libxss-dev to build depends, now also on natty...
+
+ -- Rob Caelers <robc@krandor.org>  Sun, 25 Mar 2012 14:03:59 +0200
+
+workrave (1.9.908-ppa1) precise; urgency=low
+
+  * Support glib < 2.32
+
+ -- Rob Caelers <robc@krandor.org>  Sun, 25 Mar 2012 12:52:55 +0200
+
+workrave (1.9.907-ppa2) precise; urgency=low
+
+  * Add libxss-dev to build depends
+
+ -- Rob Caelers <robc@krandor.org>  Sun, 25 Mar 2012 11:27:11 +0200
+
+workrave (1.9.907-ppa1) precise; urgency=low
+
+  * New snapshot release
+    - Adds new activity monitor that use the XScreenSaver extension. This
+	may solve X crashes.
+
+ -- Rob Caelers <robc@krandor.org>  Sat, 24 Mar 2012 22:53:20 +0100
+
+workrave (1.9.906-ppa1) precise; urgency=low
+
+  * Regenerated tarballs with older intltool
+
+ -- Rob Caelers <robc@krandor.org>  Sat, 11 Feb 2012 21:49:15 +0100
+
+workrave (1.9.905-ppa2) precise; urgency=low
+
+  * Fix location of unity indicator plugins.
+
+ -- Rob Caelers <robc@krandor.org>  Sat, 11 Feb 2012 20:19:44 +0100
+
+workrave (1.9.905-ppa1) oneiric; urgency=low
+
+  * New snapshot release
+  * Aka 1.10 release candidate 1
+
+ -- Rob Caelers <robc@krandor.org>  Sat, 11 Feb 2012 19:26:40 +0100
+
 workrave (1.9.904-ppa1) oneiric; urgency=low
 
   * New snapshot release

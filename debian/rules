@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 # debian/rules that uses debhelper.
-# GNU copyright 1997 to 1999 by Joey Hess.
+# GNU copyright 1997, 2012 to 1999 by Joey Hess.
 
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
@@ -38,7 +38,8 @@ config.status: configure
 		--mandir=\$${prefix}/share/man --infodir=\$${prefix}/share/info \
 		--libexecdir=\$${prefix}/lib/gnome-applets --sysconfdir=/etc \
 		--disable-dependency-tracking --enable-dbus \
-		--enable-exercises --enable-gsettings --disable-schemas-compile
+		--enable-exercises --enable-gsettings --disable-schemas-compile \
+		--enable-monitors=screensaver,record,x11events
 	rm config.sub && mv config.sub.upstream config.sub
 	rm config.guess && mv config.guess.upstream config.guess
 

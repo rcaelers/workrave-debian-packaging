@@ -23,6 +23,7 @@ Build-Depends: debhelper (>= 8),
 	       libxi-dev,
 	       libxmu-dev,
 	       libxtst-dev,
+	       libxss-dev,
 	       python-cheetah
 Standards-Version: 3.9.2
 Homepage: http://www.workrave.org/

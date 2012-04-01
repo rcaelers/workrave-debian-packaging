@@ -2,7 +2,7 @@ Source: workrave
 Section: gnome
 Priority: extra
 Maintainer: Rob Caelers <robc@krandor.org>
-Build-Depends: debhelper (>= 8), libgnomeui-dev, libpanel-applet2-dev, libxi-dev, libxmu-dev, libxtst-dev, autotools-dev, libxml-parser-perl, libdbus-glib-1-dev, libgdome2-dev, libgstreamer0.10-dev, intltool, python-cheetah, libgtkmm-2.4-dev, libglibmm-2.4-dev, libsigc++-2.0-dev, libpulse-dev
+Build-Depends: debhelper (>= 8), libgnomeui-dev, libpanel-applet2-dev, libxi-dev, libxmu-dev, libxtst-dev, autotools-dev, libxml-parser-perl, libdbus-glib-1-dev, libgdome2-dev, libgstreamer0.10-dev, intltool, python-cheetah, libgtkmm-2.4-dev, libglibmm-2.4-dev, libsigc++-2.0-dev, libpulse-dev, libxss-dev
 Standards-Version: 3.9.1
 Homepage: http://www.workrave.org/
 
