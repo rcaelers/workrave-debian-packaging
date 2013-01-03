@@ -1,3 +1,18 @@
+workrave (1.9.911-ppa1) UNRELEASED; urgency=low
+
+  * Snapshot release
+
+ -- Rob Caelers <robc@krandor.org>  Thu, 03 Jan 2013 21:53:19 +0100
+
+workrave (1.9.910-ppa1) precise; urgency=low
+
+  * Added Serbian translation (Goran Maričić)
+  * Add the capability to delete all stored statistics (Jay Satiro)
+  * Fix crash on exit.
+  * Updated Catalan (Jordi Mallach)
+
+ -- Rob Caelers <robc@krandor.org>  Sat, 05 May 2012 13:53:47 +0200
+
 workrave (1.9.909-ppa1) precise; urgency=low
 
   * Fixes visibility of the Gnome Shell applet.

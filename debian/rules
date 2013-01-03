@@ -39,7 +39,7 @@ config.status: configure
 		--libexecdir=\$${prefix}/lib/gnome-applets --sysconfdir=/etc \
 		--disable-dependency-tracking --enable-dbus \
 		--enable-exercises --enable-gsettings --disable-schemas-compile \
-		--enable-monitors=screensaver,record,x11events
+		--enable-monitors=record,screensaver,x11events
 	rm config.sub && mv config.sub.upstream config.sub
 	rm config.guess && mv config.guess.upstream config.guess
 
