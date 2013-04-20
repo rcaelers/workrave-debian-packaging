@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 # debian/rules that uses debhelper.
-# GNU copyright 1997, 2012 to 1999 by Joey Hess.
+# GNU copyright 1997, 2012, 2013 to 1999 by Joey Hess.
 
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
@@ -75,7 +75,7 @@ install: build
 
 	# Add here commands to install the package into debian/workrave.
 	$(MAKE) install DESTDIR=$(CURDIR)/debian/tmp
-	rmdir $(CURDIR)/debian/tmp/usr/include
+	[ ! -d $(CURDIR)/debian/tmp/usr/include ] || rmdir $(CURDIR)/debian/tmp/usr/include
 
 # Build architecture-independent files here.
 binary-indep: build install

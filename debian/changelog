@@ -1,3 +1,15 @@
+workrave (1.10-ppa1ubuntu1) UNRELEASED; urgency=low
+
+  * New upstream release.
+
+ -- Rob Caelers <robc@krandor.org>  Sun, 13 Jan 2013 10:45:37 +0100
+
+workrave (1.9.911-ppa2) raring; urgency=low
+
+  * Snapshot release
+
+ -- Rob Caelers <robc@krandor.org>  Thu, 03 Jan 2013 23:26:40 +0100
+
 workrave (1.9.911-ppa1) UNRELEASED; urgency=low
 
   * Snapshot release
