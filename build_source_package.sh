@@ -1,6 +1,6 @@
 #!/bin/sh -x
 
-BUILD=/home/robc/src/workrave-build
+BUILD=/home/robc/tmp/workrave-pbuild
 mkdir -p "$BUILD"
 
 SOURCE="$1"
@@ -13,7 +13,7 @@ tar xzfC "$SOURCE" "$BUILD" || exit 1
 cp "$SOURCE" "$BUILD/workrave_$VERSION.orig.tar.gz" || exit 1
 cp -r ./debian "$BUILD/workrave-$VERSION/debian" || exit 1
 
-for series in raring quantal precise oneiric natty
+for series in precise trusty utopic vivid
 do
     echo Create $series source package
     (
@@ -52,6 +52,7 @@ do
 	rm -rf debian/lucid debian/maverick debian/natty
 	
 	sed -i -e "1,1 s/^\(.*ppa[0-9]\+\)\(.*\)\().*\)$/\1~${series}${SERIES_VERSION}\3/" -e "1,1 s/^\(.*) \)\(.*\)\(;.*\)$/\1${series}\3/"  debian/changelog 
+        pwd
 	debuild -S -sa -k3300F30F -j12
         )  > "$BUILD/${series}.log" 2>&1
 done

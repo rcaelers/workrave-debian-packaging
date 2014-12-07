@@ -1,10 +1,12 @@
 #!/bin/sh -x
 
-BUILD=/home/robc/src/workrave-build
+BUILD=/home/robc/tmp/build
 mkdir -p "$BUILD"
 
 SOURCE="$1"
 VERSION=`echo $SOURCE | sed -e 's/.*-\(.*\).tar.gz/\1/'`
+
+echo $VERSION
 
 echo "Preparing build environment"
 
