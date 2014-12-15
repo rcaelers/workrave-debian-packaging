@@ -25,7 +25,9 @@ Build-Depends: debhelper (>= 8),
 	       libxmu-dev,
 	       libxtst-dev,
 	       libxss-dev,
-	       python-cheetah
+	       python-cheetah,
+               xfce4-panel-dev,
+               libgtk2.0-dev
 Standards-Version: 3.9.2
 Homepage: http://www.workrave.org/
 
