@@ -2,8 +2,10 @@ workrave (1.10.6.0-ppa1) utopic; urgency=medium
 
   * Improved screen lock and shutdown in break window (Mateusz Jończyk)
   * Add suspend/hibernate option to break window on Linux (Mateusz Jończyk)
+  * Add Cinnmon Applet
+  * Add XFCE Applet
 
- -- Rob Caelers <robc@krandor.org>  Sun, 07 Dec 2014 16:21:51 +0100
+ -- Rob Caelers <robc@krandor.org>  Sun, 15 Dec 2014 22:10:19 +0100
 
 workrave (1.10.5.0-ppa1~trusty1) utopic; urgency=medium
 

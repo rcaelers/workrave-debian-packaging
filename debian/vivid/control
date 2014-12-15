@@ -79,9 +79,8 @@ Description: Repetitive Strain Injury prevention tool (Unity support)
  Workrave offers many more configuration options than other similar
  tools.
  .
- This package contains the unity applet.
+ This package contains the Unity applet.
 
- 
 Package: workrave-gnome
 Architecture: any
 Depends: workrave (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
@@ -98,4 +97,40 @@ Description: Repetitive Strain Injury prevention tool (Gnome support)
  Workrave offers many more configuration options than other similar
  tools.
  .
- This package contains the gnome applet.
+ This package contains the Gnome Shell & Flashback applet.
+
+Package: workrave-cinnamon
+Architecture: any
+Depends: workrave (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Description: Repetitive Strain Injury prevention tool (Cinnamon support)
+ Workrave is a program that assists in the recovery and prevention of
+ Repetitive Strain Injury (RSI). The program frequently alerts you to
+ take micro-pauses, rest breaks and restricts you to your daily limit.
+ .
+ It includes a system tray applet that works with GNOME and KDE
+ and has network capabilities to monitor your activity even if
+ switching back and forth between different computers is part of your
+ job.
+ .
+ Workrave offers many more configuration options than other similar
+ tools.
+ .
+ This package contains the Cinnamon applet.
+
+Package: workrave-xfce
+Architecture: any
+Depends: workrave (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Description: Repetitive Strain Injury prevention tool (Cinnamon support)
+ Workrave is a program that assists in the recovery and prevention of
+ Repetitive Strain Injury (RSI). The program frequently alerts you to
+ take micro-pauses, rest breaks and restricts you to your daily limit.
+ .
+ It includes a system tray applet that works with GNOME and KDE
+ and has network capabilities to monitor your activity even if
+ switching back and forth between different computers is part of your
+ job.
+ .
+ Workrave offers many more configuration options than other similar
+ tools.
+ .
+ This package contains the XFCE applet.

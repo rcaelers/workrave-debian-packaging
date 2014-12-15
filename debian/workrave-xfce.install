@@ -1,0 +1,3 @@
+debian/tmp/usr/lib/libworkrave-gtk2-private*.so*
+debian/tmp/usr/lib/xfce4
+debian/tmp/usr/share/xfce4
