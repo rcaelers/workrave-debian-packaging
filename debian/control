@@ -27,7 +27,8 @@ Build-Depends: debhelper (>= 8),
 	       libxss-dev,
 	       python-cheetah,
                xfce4-panel-dev,
-               libgtk2.0-dev
+               libgtk2.0-dev,
+               libmate-panel-applet-dev
 Standards-Version: 3.9.2
 Homepage: http://www.workrave.org/
 
@@ -136,3 +137,21 @@ Description: Repetitive Strain Injury prevention tool (Cinnamon support)
  tools.
  .
  This package contains the XFCE applet.
+
+Package: workrave-mate
+Architecture: any
+Depends: workrave (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Description: Repetitive Strain Injury prevention tool (Cinnamon support)
+ Workrave is a program that assists in the recovery and prevention of
+ Repetitive Strain Injury (RSI). The program frequently alerts you to
+ take micro-pauses, rest breaks and restricts you to your daily limit.
+ .
+ It includes a system tray applet that works with GNOME and KDE
+ and has network capabilities to monitor your activity even if
+ switching back and forth between different computers is part of your
+ job.
+ .
+ Workrave offers many more configuration options than other similar
+ tools.
+ .
+ This package contains the Mate applet.

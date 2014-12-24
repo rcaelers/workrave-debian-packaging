@@ -2,10 +2,14 @@ workrave (1.10.6.0-ppa1) utopic; urgency=medium
 
   * Improved screen lock and shutdown in break window (Mateusz Jończyk)
   * Add suspend/hibernate option to break window on Linux (Mateusz Jończyk)
-  * Add Cinnmon Applet
-  * Add XFCE Applet
+  * Gnome applet updated to work with latest Gnome 3 flashback (Dmitry Shachnev)
+  * Applets added for Cinnamon, XFCE and MATE.
+  * Bug fixes:
+     - Break window was transparent when blocking mode was set to 'input and screen'
+     - Text background in exercises window was black, making the text unreadable.
+     - In some cases the timers were shown twice in the panel
 
- -- Rob Caelers <robc@krandor.org>  Sun, 15 Dec 2014 22:10:19 +0100
+ -- Rob Caelers <robc@krandor.org>  Sun, 24 Dec 2014 16:20:27 +0100
 
 workrave (1.10.5.0-ppa1~trusty1) utopic; urgency=medium
 
