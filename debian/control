@@ -124,7 +124,7 @@ Description: Repetitive Strain Injury prevention tool (Cinnamon support)
 Package: workrave-xfce
 Architecture: any
 Depends: workrave (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
-Description: Repetitive Strain Injury prevention tool (Cinnamon support)
+Description: Repetitive Strain Injury prevention tool (XFCE support)
  Workrave is a program that assists in the recovery and prevention of
  Repetitive Strain Injury (RSI). The program frequently alerts you to
  take micro-pauses, rest breaks and restricts you to your daily limit.
@@ -142,7 +142,7 @@ Description: Repetitive Strain Injury prevention tool (Cinnamon support)
 Package: workrave-mate
 Architecture: any
 Depends: workrave (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
-Description: Repetitive Strain Injury prevention tool (Cinnamon support)
+Description: Repetitive Strain Injury prevention tool (MATE support)
  Workrave is a program that assists in the recovery and prevention of
  Repetitive Strain Injury (RSI). The program frequently alerts you to
  take micro-pauses, rest breaks and restricts you to your daily limit.
