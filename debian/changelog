@@ -1,3 +1,26 @@
+workrave (1.10.10.0-ppa1~willy1) UNRELEASED; urgency=medium
+
+  * UI tweaks
+
+ -- Rob Caelers <robc@ubuntu>  Sat, 12 Dec 2015 14:15:01 +0100
+
+workrave (1.10.8.0-ppa1) wily; urgency=medium
+
+  * Changed to gstreamer 1.0 on Utopic
+  * Extra statistics:
+     - Weekly usage statistics (Rob Caelers)
+     - Monthly usage statistics (Denis Nikolaenko)
+  * Fix gtkmm 3.18 compilation (Javier Tia, Denis Nikolaenko)
+  * Support Gnome 3.16
+
+ -- Rob Caelers <robc@ubuntu>  Sat, 12 Dec 2015 14:14:41 +0100
+
+workrave (1.10.6.0-ppa2) UNRELEASED; urgency=medium
+
+  * Remove MATE on release before utopic.
+
+ -- Rob Caelers <robc@utopic>  Wed, 24 Dec 2014 20:18:50 +0100
+
 workrave (1.10.6.0-ppa1) utopic; urgency=medium
 
   * Improved screen lock and shutdown in break window (Mateusz Jończyk)

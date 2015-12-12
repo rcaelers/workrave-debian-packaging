@@ -13,7 +13,7 @@ tar xzfC "$SOURCE" "$BUILD" || exit 1
 cp "$SOURCE" "$BUILD/workrave_$VERSION.orig.tar.gz" || exit 1
 cp -r ./debian "$BUILD/workrave-$VERSION/debian" || exit 1
 
-for series in precise trusty utopic vivid
+for series in trusty utopic vivid wily
 do
     echo Create $series source package
     (

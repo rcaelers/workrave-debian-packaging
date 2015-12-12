@@ -3,7 +3,6 @@ Section: gnome
 Priority: extra
 Maintainer: Rob Caelers <robc@krandor.org>
 Build-Depends: debhelper (>= 8),
-               autoconf-archive,
 	       autotools-dev,
 	       autopoint,
 	       gobject-introspection  (>= 0.6.7),
