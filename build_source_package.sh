@@ -13,7 +13,7 @@ tar xzfC "$SOURCE" "$BUILD" || exit 1
 cp "$SOURCE" "$BUILD/workrave_$VERSION.orig.tar.gz" || exit 1
 cp -r ./debian "$BUILD/workrave-$VERSION/debian" || exit 1
 
-for series in trusty utopic vivid wily
+for series in trusty vivid wily yakkety
 do
     echo Create $series source package
     (
@@ -23,12 +23,12 @@ do
 	    OLD_VERSION=`dpkg-parsechangelog -l"$BUILD/$series/workrave-$VERSION/debian/changelog" | sed -n -e 's/^Version: \(.*\)/\1/p'`
 	    OLD_PKG_VERSION=`echo $OLD_VERSION | sed -e 's/^\(.*ppa[0-9]\+\)~.*$/\1/'`
 	    OLD_SERIES_VERSION=`echo $OLD_VERSION | sed -e "s/^.*~${series}\(.*\)$/\1/"`
-	    echo O $OLD_VERSION
-	    echo P $OLD_PKG_VERSION
-	    echo S $OLD_SERIES_VERSION
+	    echo "Current version: $OLD_VERSION"
+	    echo "            ppa: $OLD_PKG_VERSION"
+	    echo "         series: $OLD_SERIES_VERSION"
 	fi
 	
-	rm -rf "$BUILD/$series" > /dev/null 2>&1 ;
+	rm -rf "$BUILD/$series" > /dev/null 2>&1
         mkdir -p "$BUILD/$series" && 
         ln "$SOURCE" "$BUILD/$series/workrave_$VERSION.orig.tar.gz" && 
         cp -a "$BUILD/workrave-$VERSION" "$BUILD/$series" && 
@@ -40,10 +40,10 @@ do
 	if [ "x$NEW_PKG_VERSION" = "x$OLD_PKG_VERSION" ]; then
 	    SERIES_VERSION=`expr $OLD_SERIES_VERSION + 1`
 	fi
-	
-	echo NO $NEW_VERSION
-	echo NP $NEW_PKG_VERSION
-	echo S $SERIES_VERSION
+
+	echo "New version: $NEW_VERSION"
+	echo "        ppa: $NEW_PKG_VERSION"
+	echo "     series: $SERIES_VERSION"
 	
 	if [ -d debian/${series} ]; then
 	    mv -f debian/${series}/* debian
