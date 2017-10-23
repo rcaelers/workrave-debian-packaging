@@ -1,3 +1,38 @@
+workrave (1.10.18.0-ppa1) UNRELEASED; urgency=medium
+
+  * Support Gnome Shell 3.24/26
+  * macOS compilation fixes (Tom Parker)
+
+ -- Rob Caelers <robc@arty>  Mon, 23 Oct 2017 20:13:52 +0200
+
+workrave (1.10.17.0-ppa1) UNRELEASED; urgency=medium
+
+  * Update Czech translation (Pavel Bborecki)
+
+ -- Rob Caelers <robc@arty>  Mon, 23 Oct 2017 20:12:37 +0200
+
+workrave (1.10.16.0-ppa1) yakkety; urgency=medium
+
+  * Mark applet as compatible with GNOME 3.22 (Francois Marier)
+  * Fix text alignment time bar.
+  * Fix resuming microbreak after postponing restbreak
+
+ -- Rob Caelers <robc@ubuntu>  Thu, 15 Sep 2016 20:07:00 +0200
+
+workrave (1.10.15.0-ppa1) yakkety; urgency=medium
+
+  * Fix crash when no shutdown/hibernate options are available.
+
+  * Updated traditional Chinese translation (Kevin Kuan)
+
+ -- Rob Caelers <robc@ubuntu>  Thu, 15 Sep 2016 20:06:01 +0200
+
+workrave (1.10.14.0-ppa2) xenial; urgency=medium
+
+  * Update dependency for xenial
+
+ -- Rob Caelers <robc@ubuntu>  Sun, 01 May 2016 19:51:24 +0200
+
 workrave (1.10.14.0-ppa1) xenial; urgency=medium
 
   * Fixed issue where pressing the down key during a restbreak would

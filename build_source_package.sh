@@ -13,7 +13,7 @@ tar xzfC "$SOURCE" "$BUILD" || exit 1
 cp "$SOURCE" "$BUILD/workrave_$VERSION.orig.tar.gz" || exit 1
 cp -r ./debian "$BUILD/workrave-$VERSION/debian" || exit 1
 
-for series in trusty vivid wily yakkety
+for series in artful zesty yakkety xenial trusty
 do
     echo Create $series source package
     (
@@ -49,10 +49,10 @@ do
 	    mv -f debian/${series}/* debian
 	    rmdir debian/${series}
 	fi
-	rm -rf debian/lucid debian/maverick debian/natty
+	rm -rf debian/trusty debian/xenial
 	
 	sed -i -e "1,1 s/^\(.*ppa[0-9]\+\)\(.*\)\().*\)$/\1~${series}${SERIES_VERSION}\3/" -e "1,1 s/^\(.*) \)\(.*\)\(;.*\)$/\1${series}\3/"  debian/changelog 
         pwd
-	debuild -S -sa -k3300F30F -j12
+	debuild -d -S -sa -k3300F30F -j12
         )  > "$BUILD/${series}.log" 2>&1
 done

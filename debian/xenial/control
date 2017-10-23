@@ -3,6 +3,7 @@ Section: gnome
 Priority: extra
 Maintainer: Rob Caelers <robc@krandor.org>
 Build-Depends: debhelper (>= 8),
+               autoconf-archive,
 	       autotools-dev,
 	       autopoint,
 	       gobject-introspection  (>= 0.6.7),
@@ -10,7 +11,6 @@ Build-Depends: debhelper (>= 8),
 	       intltool,
 	       libdbusmenu-glib-dev,
 	       libdbusmenu-gtk3-dev,
-	       libgdome2-dev,
 	       libgirepository1.0-dev  (>= 0.6.7),
 	       libglib2.0-0 (>= 2.30),
 	       libglibmm-2.4-dev (>= 2.28.0),
@@ -123,7 +123,7 @@ Description: Repetitive Strain Injury prevention tool (Cinnamon support)
 Package: workrave-xfce
 Architecture: any
 Depends: workrave (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
-Description: Repetitive Strain Injury prevention tool (Cinnamon support)
+Description: Repetitive Strain Injury prevention tool (XFCE support)
  Workrave is a program that assists in the recovery and prevention of
  Repetitive Strain Injury (RSI). The program frequently alerts you to
  take micro-pauses, rest breaks and restricts you to your daily limit.
@@ -141,7 +141,7 @@ Description: Repetitive Strain Injury prevention tool (Cinnamon support)
 Package: workrave-mate
 Architecture: any
 Depends: workrave (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
-Description: Repetitive Strain Injury prevention tool (Cinnamon support)
+Description: Repetitive Strain Injury prevention tool (MATE support)
  Workrave is a program that assists in the recovery and prevention of
  Repetitive Strain Injury (RSI). The program frequently alerts you to
  take micro-pauses, rest breaks and restricts you to your daily limit.
