@@ -1,0 +1,46 @@
+#!/usr/bin/make -f
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/buildflags.mk
+
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+
+ifeq ($(MAKE),ninja)
+	DH_BUILDSYSTEM = cmake+ninja
+else
+	DH_BUILDSYSTEM = cmake
+endif
+
+%:
+	dh $@ --buildsystem=cmake --parallel
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+		-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH) \
+        -DWITH_UI=Gtk+3 \
+	    -DWITH_TRACING=OFF \
+        -DWITH_TESTS=OFF \
+        -DCODE_COVERAGE=OFF \
+        -DCMAKE_CXX_COMPILER=g++-10 \
+        -DCMAKE_C_COMPILER=gcc-10
+
+override_dh_compress:
+	dh_compress --exclude=gnuplot-workrave --exclude=workrave-dump
+
+override_dh_install:
+	find debian -name 'libworkrave-*private*.so' -print -delete
+	dh_install
+
+override_dh_missing:
+	dh_missing --fail-missing
+
+override_dh_installexamples-arch:
+	dh_installexamples
+	chmod +x $(CURDIR)/debian/workrave/usr/share/doc/workrave/examples/gnuplot-workrave
+	chmod +x $(CURDIR)/debian/workrave/usr/share/doc/workrave/examples/workrave-dump
+
+override_dh_auto_test:
+
+override_dh_installchangelogs:
+	dh_installchangelogs NEWS
