@@ -6,6 +6,11 @@ include /usr/share/dpkg/buildflags.mk
 
 DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
+GNOME_SHELL_VERSION := $(shell apt-cache policy gnome-shell | grep Candidate: | awk '{print $$2}' | cut -d. -f1)
+ifeq ($(shell [ $(GNOME_SHELL_VERSION) -ge 45 ]; echo $$?),0)
+    CONFIGURE_FLAGS += -DWITH_GNOME45=ON
+endif
+
 ifeq ($(MAKE),ninja)
 	DH_BUILDSYSTEM = cmake+ninja
 else
@@ -19,9 +24,10 @@ override_dh_auto_configure:
 	dh_auto_configure -- \
 		-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH) \
         -DWITH_UI=Gtk+3 \
-	    -DWITH_TRACING=OFF \
+	      -DWITH_TRACING=OFF \
         -DWITH_TESTS=OFF \
-        -DCODE_COVERAGE=OFF
+        -DCODE_COVERAGE=OFF \
+				$(CONFIGURE_FLAGS)
 
 override_dh_compress:
 	dh_compress --exclude=gnuplot-workrave --exclude=workrave-dump

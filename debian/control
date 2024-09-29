@@ -5,6 +5,7 @@ Maintainer: Rob Caelers <robc@krandor.org>
 Build-Depends:
  cmake (>= 3.16.3),
  debhelper-compat (= 13),
+ git,
  gobject-introspection  (>= 0.6.7),
  gsettings-desktop-schemas-dev,
  intltool,
@@ -22,6 +23,7 @@ Build-Depends:
  libmate-panel-applet-dev,
  libpulse-dev (>= 0.9.5),
  libsigc++-2.0-dev (>= 2.2.4.2),
+ libfmt-dev,
  libspdlog-dev,
  libxfce4panel-2.0-dev,
  libxi-dev,
