@@ -25,7 +25,7 @@ Build-Depends:
  libsigc++-2.0-dev (>= 2.2.4.2),
  libfmt-dev,
  libspdlog-dev,
- ibxfce4ui-2-dev,
+ libxfce4ui-2-dev,
  libxfce4panel-2.0-dev,
  libxi-dev,
  libxmu-dev,
