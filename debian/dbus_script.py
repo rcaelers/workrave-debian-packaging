@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import os
 import sys
 import pwd
@@ -26,7 +26,7 @@ class WorkraveDBus:
 
     def microbreak_signal(self, progress, sender=None):
         self.break_signal("microbreak", progress)
-
+        
     def restbreak_signal(self, progress, sender=None):
         self.break_signal("restbreak", progress)
 
@@ -36,13 +36,13 @@ class WorkraveDBus:
     def break_signal(self, breakid, progress, sender=None):
 
         if progress == "prelude":
-            print "Break warning %s" % breakid
+            print("Break warning %s" % breakid)
         elif progress == "break":
-            print "Break %s started" % breakid
+            print("Break %s started" % breakid)
         elif progress == "none":
-            print "Break %s idle" % breakid
+            print("Break %s idle" % breakid)
         else:
-            print "Unknown progress for %s: %s" % (breakid, progress)
+            print("Unknown progress for %s: %s" % (breakid, progress))
 
 if __name__ == '__main__':
 

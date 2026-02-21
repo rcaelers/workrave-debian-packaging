@@ -1,0 +1,2 @@
+usr/lib/${DEB_HOST_MULTIARCH}/gnome-panel/modules/libworkrave-applet.so
+usr/share/workrave/ui/workrave-gnome-applet-menu.xml

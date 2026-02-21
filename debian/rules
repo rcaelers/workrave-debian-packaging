@@ -24,15 +24,16 @@ override_dh_auto_configure:
 	dh_auto_configure -- \
 		-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH) \
         -DWITH_UI=Gtk+3 \
-	      -DWITH_TRACING=OFF \
+	    -DWITH_TRACING=OFF \
         -DWITH_TESTS=OFF \
         -DCODE_COVERAGE=OFF \
-				$(CONFIGURE_FLAGS)
+		$(CONFIGURE_FLAGS)
 
 override_dh_compress:
 	dh_compress --exclude=gnuplot-workrave --exclude=workrave-dump
 
 override_dh_install:
+	find debian -name '*.la' -print -delete
 	find debian -name 'libworkrave-*private*.so' -print -delete
 	dh_install
 

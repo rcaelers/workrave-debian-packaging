@@ -1,9 +1,17 @@
-README.source
--------------
+Preparing a workrave source snapshot for Debian
+===============================================
 
- The Debian package uses dpatch(1) for the modifications of the upstream source.
- If you want to change something it is best to use the dpatch approach as documented
- in /usr/share/doc/dpatch/README.source.gz
+1- Download latest tarball from Github (https://github.com/rcaelers/workrave/downloads).
+2- Find latest version number mentioned in the commit log and make a note of the
+   last commit ID (https://github.com/rcaelers/workrave/commits/master).
+3- Unpack the tarball to a new workrave-LAST_VERSION+COMMIT_ID/ directory
+4- Run ./autogen.sh in the tarball
+5- Delete these generated files: rm -rf autom4te.cache/ po/Makefile.in.in~
+6- Create a new workrave-LAST_VERSION+COMMIT_ID.tar.gz based on that directory
 
- -- Francois Marier <francois@debian.org>  Mon, 12 Oct 2009 12:07:19 +1300
+Once a tarball is available, then it's just a matter of using the usual git-buildpackage
+tool:
 
+  git import-orig ../workrave-LAST_VERSION+COMMIT_ID.tar.gz
+
+ -- Francois Marier <francois@debian.org>  Mon, 28 May 2012 10:58:05 +1200
