@@ -7,8 +7,9 @@ Files: *
 Copyright: Copyright 2001-2026 Rob Caelers and Raymond Penners
 License: GPL-3+
 
-Files: frontend/gtkmm/src/workrave.appdata.xml
-Copyright: Copyright 2001-2017 Rob Caelers and Raymond Penners
+Files: ui/app/workrave.appdata.xml
+       ui/app/workrave.metainfo.xml
+Copyright: Copyright 2001-2026 Rob Caelers and Raymond Penners
 License: CC-BY-3.0
 
 Files: debian/*
