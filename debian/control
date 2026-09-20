@@ -13,7 +13,7 @@ Build-Depends:
  libboost-all-dev,
  libdbusmenu-glib-dev,
  libdbusmenu-gtk3-dev,
- libgirepository1.0-dev,
+ libgirepository-1.0-dev,
  libglib2.0-dev,
  libglibmm-2.4-dev,
  libgnome-panel-dev (>= 3.37.1),
