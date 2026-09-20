@@ -25,6 +25,7 @@ Build-Depends:
  libsigc++-2.0-dev,
  libfmt-dev,
  libspdlog-dev,
+ libsqlite3-dev (>= 3.37),
  libxfce4panel-2.0-dev,
  libxi-dev,
  libxmu-dev,
